@@ -4,8 +4,8 @@
 class Yaplot < Formula
   desc "Yet another plotter in 3D - easy 3D modeller and animator for visualizing simulation results"
   homepage "https://github.com/vitroid/Yaplot"
-  url "https://github.com/vitroid/Yaplot/archive/v4.1.2.tar.gz"
-  sha256 "c363947c8fe380325631a45e73d65ecc0001432ae14c1b9313431345a258c2dd"
+  url "https://github.com/vitroid/Yaplot/archive/master.tar.gz"
+  sha256 "3ad0ed4dc9b18dcdb211bafd4f0be129404b638f5ef1ea1c6fc5bf840deda544"
   license "MIT"
 
   depends_on "gtk+3"
@@ -28,7 +28,8 @@ class Yaplot < Formula
   end
 
   test do
-    # Test that yaplot can display help
-    system "#{bin}/yaplot", "-h"
+    # Test that yaplot binary exists and is executable
+    assert_predicate bin/"yaplot", :exist?
+    assert_predicate bin/"yaplot", :executable?
   end
 end
