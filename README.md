@@ -6,9 +6,15 @@ See https://github.com/vitroid/Yaplot for the command itself.
 
 ## Installation
 
+### 1. Install the homebrew
+
+See https://brew.sh .
+
+### 2. Install Yaplot via homebrew
+
 ```shell
 brew tap vitroid/yaplot
-brew install --build-from-source yaplot
+brew install yaplot
 ```
 
 If it says "Update them from Software Update in System Settings", follow the instructions
