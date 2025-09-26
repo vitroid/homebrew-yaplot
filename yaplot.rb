@@ -12,8 +12,7 @@ class Yaplot < Formula
   depends_on "pkg-config" => :build
   depends_on "libpng"
 
-  # Disable bottles since this is a third-party formula
-  disable_bottles!
+  # No pre-built bottles available for this third-party formula
 
   def install
     # Generate common.h from template
