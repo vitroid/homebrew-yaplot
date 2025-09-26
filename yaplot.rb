@@ -19,10 +19,10 @@ class Yaplot < Formula
     # Generate common.h from template
     system "make", "gen_common", "PKGDATADIR=#{share}/yaplot", "BINDIR=#{bin}"
     
-    # Build the program
-    system "make", "PKGDATADIR=#{share}/yaplot", "BINDIR=#{bin}"
+    # Build the program (but don't use the install target which may have issues)
+    system "make", "yaplot", "PKGDATADIR=#{share}/yaplot", "BINDIR=#{bin}"
     
-    # Install manually since the Makefile's install target uses hardcoded paths
+    # Install manually
     bin.install "yaplot"
     (share/"yaplot").install "yaplot.col", "help.yap"
   end
