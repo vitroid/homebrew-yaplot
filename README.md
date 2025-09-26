@@ -14,7 +14,7 @@ See https://brew.sh .
 
 ```shell
 brew tap vitroid/yaplot
-brew install yaplot
+brew install --build-from-source vitroid/yaplot/yaplot
 ```
 
 If it says "Update them from Software Update in System Settings", follow the instructions
