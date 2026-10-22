@@ -1,31 +1,13 @@
-# homebrew-yaplot
+# homebrew-yaplot (archived)
 
-A HomeBrew installer for the yaplot.
+The Homebrew formula for Yaplot has moved into the main repository,
+https://github.com/vitroid/Yaplot . This tap is no longer updated.
 
-See https://github.com/vitroid/Yaplot for the command itself.
-
-## Installation
-
-### 1. Install the homebrew
-
-See https://brew.sh .
-
-### 2. Install Yaplot via homebrew
+To switch:
 
 ```shell
-brew tap vitroid/yaplot
-brew install --build-from-source vitroid/yaplot/yaplot
-```
-
-If it says "Update them from Software Update in System Settings", follow the instructions
-
-```shell
-sudo rm -rf /Library/Developer/CommandLineTools
-sudo xcode-select --install
-```
-
-and rerun the following command.
-
-```shell
-brew install --build-from-source yaplot
+brew untap vitroid/yaplot
+brew tap vitroid/yaplot https://github.com/vitroid/Yaplot
+brew trust vitroid/yaplot
+brew install vitroid/yaplot/yaplot
 ```
